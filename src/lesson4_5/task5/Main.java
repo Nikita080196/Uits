@@ -21,8 +21,8 @@ public class Main {
                     c = (c < b && c < a) ? c : a;
                     System.out.println("Число меньшее  по модулю : " + c);
                 } else print();
-            }
-        }
+            } else print();
+        } else print();
     }
 
     public static void print() {
