@@ -3,24 +3,17 @@ package lesson3.task8;
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-        System.out.println("Введите первое целое число:");
+    public static void main(String args[]) {
         Scanner scn = new Scanner(System.in);
-        if (scn.hasNextInt()) {
-            int i = scn.nextInt();
-            System.out.println("Введите второе целое число :");
-            if (scn.hasNextInt()) {
-                int k = scn.nextInt();
-                System.out.println("Сумма чисел " + i + " и " + k + " равна " + (k + i));
-            } //else
-                print();
+        try {
+            System.out.println("Введите первое целое число:");
+            int a = scn.nextInt();
+            System.out.println("Введите второе целое число:");
+            int b = scn.nextInt();
+            int sum = a + b;
+            System.out.println("Сумма двух целыз чисел = " + sum);
+        } catch (Exception e) {
+            System.out.println("Вы ввели не целое число!");
         }
-            else
-            print();
-        }
-
-    public static void print() {
-        System.out.println("Вы ввели не целое число");
     }
 }
