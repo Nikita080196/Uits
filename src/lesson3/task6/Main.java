@@ -65,8 +65,6 @@ public class Main {
         float f = 56.3f;
         double d = 32.3;
 
-
-
         char c1 = (char)b;
         char c2 = (char)s;
         char c3 = (char)i;
@@ -150,7 +148,6 @@ public class Main {
         System.out.println("До преобразования переменная типа int равна " + i + ", после преобразования в long: " + f4);
         System.out.println("До преобразования переменная типа long равна " + aLong + ", после преобразования в long: " + f5);
         System.out.println("До преобразования переменная типа double равна " + d + ", после преобразования в long: " + f6);
-
     }
     private static void convertToDouble(){
         byte b = 45;
@@ -174,11 +171,5 @@ public class Main {
         System.out.println("До преобразования переменная типа int равна " + i + ", после преобразования в long: " + d4);
         System.out.println("До преобразования переменная типа long равна " + aLong + ", после преобразования в long: " + d5);
         System.out.println("До преобразования переменная типа float равна " + f + ", после преобразования в long: " + d6);
-
     }
-
 }
-
-
-
-
