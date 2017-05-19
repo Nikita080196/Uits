@@ -2,7 +2,7 @@ package lesson3.task7;
 
 import java.util.Scanner;
 
-public class Main {
+public class NeChetChet {
     public static void main(String[] args) {
         System.out.println("Введите пожалуйста любое целое число");
         Scanner scn = new Scanner(System.in);

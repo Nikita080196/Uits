@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by Валентина on 16.05.2017.
  */
-public class Main {
+public class Fact {
     public static void main(String[] args) {
         Random random = new Random();
         int a = random.nextInt(10);

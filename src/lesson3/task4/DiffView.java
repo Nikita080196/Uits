@@ -1,6 +1,6 @@
 package lesson3.task4;
 
-public class Main {
+public class DiffView {
     public static void main(String[] args) {
         int a = 3;
         int b = 10;

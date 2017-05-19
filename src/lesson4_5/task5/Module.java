@@ -2,7 +2,7 @@ package lesson4_5.task5;
 
 import java.util.Scanner;
 
-public class Main {
+public class Module {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         float a = 0;

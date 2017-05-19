@@ -1,6 +1,6 @@
 package lesson7.task1;
 
-public class Main {
+public class PersonDemo {
     public static void main(String[] args) {
 
         Person person1 = new Person ("Дмитрий" , 10);
