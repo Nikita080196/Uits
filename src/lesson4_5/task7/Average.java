@@ -1,21 +1,14 @@
 package lesson4_5.task7;
 
-import java.util.Scanner;
-
 public class Average {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n;
-        double sum = 0.0;
-        double avg, a;
-        System.out.print("Cколько вещественных чисел хотите вычеслить: ");
-        n = in.nextInt();
-        System.out.println("Введите " + n + " чисел.");
-        for (int i = 0; i < n; i++) {
-            a = in.nextDouble();
-            sum += a;
-        }
-        avg = sum / n;
-        System.out.println("Cреднее значение " + n + " чисел равно " + avg);
+        int n = 5;
+        double a = 3.4;
+        double b = 2.5;
+        double c = 5.5;
+        double d = 3;
+        double e = 1.674;
+        double res = (a + b + c + d + e) / n;
+        System.out.println("Cреднее значение " + n + " чисел равно " + res);
     }
 }
