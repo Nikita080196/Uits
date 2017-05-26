@@ -15,11 +15,11 @@ public class Module {
         System.out.println("Введите пожалуйста третье число: ");
         c = getFloatValue(scn);
         a = (a < b && a < c) ? a : b;
-        System.out.println("Число меньшее по модулю : " + a);
         b = (b < a && b < c) ? b : a;
-        System.out.println("Число меньшее по модулю : " + b);
         c = (c < b && c < a) ? c : a;
-        System.out.println("Число меньшее  по модулю : " + c);
+        float min1 = Math.min(a, b);
+        float min2 = Math.min(min1, c);
+        System.out.println("Число меньшее  по модулю : " + min2);
     }
 
     public static float getFloatValue(Scanner scn) {
