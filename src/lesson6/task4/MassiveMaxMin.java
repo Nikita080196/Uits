@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 public class MassiveMaxMin {
     private int[][] array = {
-            {5353, -324, 213, 56, 5, 2, 1, 653},
-            {5, 53256, -4141, 52, 2523, 145, -9999, 521451},
+            {5353, 324, 213, 56, 5, 2, 1, 653},
+            {5, 53256, 4141, 52, 2523, 145, 9999, 521451},
             {521, 1522, 621, 621, -1, 0, 521, 515},
-            {74, 16574, 242, 4252, -4, 4231, 41, 151},
-            {424, 63, -41, 52, 562, 163, 53, 63}
+            {74, 16574, 242, 4252, 4, 4231, 41, 151},
+            {424, 63, 41, 52, 562, 163, 53, 63}
     };
 
     private int[][] arrayMinMax = new int[5][2];
 
     public void arrayMinMax() {
         for (int i = 0; i < array.length; i++) {
-            int min = 0;
-            int max = 0;
+            int min = array[i][0];
+            int max = array[i][0];
             for (int j = 0; j < array[0].length; j++) {
                 if (array[i][j] < min) {
                     min = array[i][j];
