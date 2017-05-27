@@ -4,14 +4,16 @@ import java.util.Arrays;
 
 public class MassiveMaxMin {
     private int[][] array = {
-            {1, 2, 3, 4, 5, 6, 7, 8},
-            {9, 10, 11, 12, 13, 14, 15, 16},
-            {17, 18, 19, 20, 21, 22, 23, 24},
-            {25, 26, 27, 28, 29, 30, 31, 32},
-            {33, 34, 35, 36, 37, 38, 39, 40}};
+            {5353, -324, 213, 56, 5, 2, 1, 653},
+            {5, 53256, -4141, 52, 2523, 145, -9999, 521451},
+            {521, 1522, 621, 621, -1, 0, 521, 515},
+            {74, 16574, 242, 4252, -4, 4231, 41, 151},
+            {424, 63, -41, 52, 562, 163, 53, 63}
+    };
+
     private int[][] arrayMinMax = new int[5][2];
 
-    public void ArrayMinMax() {
+    public void arrayMinMax() {
         for (int i = 0; i < array.length; i++) {
             int min = 0;
             int max = 0;
@@ -40,7 +42,7 @@ public class MassiveMaxMin {
 
     public static void main(String[] args) {
         MassiveMaxMin massiveMaxMin = new MassiveMaxMin();
-        massiveMaxMin.ArrayMinMax();
+        massiveMaxMin.arrayMinMax();
         massiveMaxMin.printArr();
         massiveMaxMin.printMassiveMinMax();
     }
