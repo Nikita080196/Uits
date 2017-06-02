@@ -7,6 +7,4 @@ public class Rename {
         text = text.replaceAll(regex, "OOP");
         System.out.println(text);
     }
-
-    }
-
+}
