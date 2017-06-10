@@ -4,6 +4,11 @@ public class Driver {
     private String name;
     private int experience;
 
+    public Driver(String name, int experience) {
+        this.setName(name);
+        this.setExperience(experience);
+    }
+
     public String getName() {
         return name;
     }

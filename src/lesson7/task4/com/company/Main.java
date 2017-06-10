@@ -6,17 +6,14 @@ import lesson7.task4.com.company.vehicles.Car;
 
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        Engine engine = new Engine();
-        Driver driver = new Driver();
+        Car car = new Car("Range Rover", "S", 2000);
+        Engine engine = new Engine("BMW", 749);
+        Driver driver = new Driver("Никита", 2);
 
-        car.setAutoClass("S");
-        car.setAutoMark("Range Rover");
-        car.setWeight(2000);
-        driver.setExperience(1);
-        driver.setName("Никита");
-        engine.setProducer("BMW");
-        engine.setPower(1200);
+        car.setDriver(driver);
+        System.out.println(driver);
+        car.setEngine(engine);
+        System.out.println(engine);
         car.start();
         car.stop();
         car.turnLeft();

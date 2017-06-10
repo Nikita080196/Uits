@@ -4,11 +4,18 @@ import lesson7.task4.com.company.details.Engine;
 import lesson7.task4.com.company.professions.Driver;
 
 public class Car {
+
     private String autoMark;
     private String autoClass;
     private int weight;
     private Driver driver;
     private Engine engine;
+
+    public Car(String autoMark, String autoClass, int weight) {
+        this.autoMark = autoMark;
+        this.autoClass = autoClass;
+        this.weight = weight;
+    }
 
     public String getAutoMark() {
         return autoMark;
@@ -34,16 +41,8 @@ public class Car {
         this.weight = weight;
     }
 
-    public Driver getDriver() {
-        return driver;
-    }
-
     public void setDriver(Driver driver) {
         this.driver = driver;
-    }
-
-    public Engine getEngine() {
-        return engine;
     }
 
     public void setEngine(Engine engine) {
