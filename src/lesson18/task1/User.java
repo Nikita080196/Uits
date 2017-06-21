@@ -1,6 +1,4 @@
-package lesson18;
-
-import java.util.Queue;
+package lesson18.task1;
 
 public class User {
     private String login;
