@@ -16,46 +16,39 @@ public class Girlyanda {
         System.out.println("Введите 3 если будет выясняться включена ли лампочка на первой позиции");
         System.out.println("Введите 4 если хотите распечатать текущее состояние гирлянды");
         int k = check(scanner);
+        if (k > 4 || k < 1) {
+            System.exit(0);
+        }
     }
 
     public static int check(Scanner scanner) {
-        int b = 0;
+        int count = 0;
         if (scanner.hasNextInt()) {
-            b = scanner.nextInt();
+            count = scanner.nextInt();
         }
-        if (b < 0) {
+        if (count < 0) {
             System.exit(0);
         }
-        return b;
+        return count;
     }
 
-    public static void light(int i, int b) {
+    public static void light(int i, int count ) {
         int c = 1;
-        while (c < b) {
-            int d = c;
-            System.out.println(d);
-            i = d;
+        while (c < count) {
+
+            System.out.println(i);
+            i = ~i;
             c++;
         }
 
     }
-    public static void stroka(int i , int b){
-        int e = 1;
-        while(e < b){
-            int d = e >> 1;
-            System.out.println(d);
-            i = d;
+
+    public static void runString(int i, int count ) {
+       int e = 1;
+        while (e < count ) {
+            i = i >> 1;
+            System.out.println(i);
             e++;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
