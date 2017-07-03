@@ -22,4 +22,5 @@ public class Matrix {
         }
         System.out.println(array1);
     }
-}
+    }
+

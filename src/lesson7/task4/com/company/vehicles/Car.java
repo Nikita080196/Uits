@@ -69,7 +69,7 @@ public class Car {
         System.out.println("Название авто : " + getAutoMark());
         System.out.println("Класс авто: " + getAutoClass());
         System.out.println("Масса авто : " + getWeight());
-        System.out.println("Имя водителя авто : " + driver.getName());
+        System.out.println("Имя водителя авто : " + driver.getFullName());
         System.out.println("Стаж вождения водителя : " + driver.getExperience() + " года");
         System.out.println("Двигатель : " + engine.getProducer());
         System.out.println("Мощность двигателя : " + engine.getPower());

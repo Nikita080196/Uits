@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Car car = new Car("Range Rover", "S", 2000);
         Engine engine = new Engine("BMW", 749);
-        Driver driver = new Driver("Никита", 2);
+        Driver driver = new Driver(30,"Николай Юрьевич",10);
 
         car.setDriver(driver);
         System.out.println(driver);

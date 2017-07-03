@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.task3;
 
 import lesson9.task3.*;
 
