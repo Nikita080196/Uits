@@ -8,14 +8,14 @@ public class FileCopy {
 
         printInfo(f1, " ");
     }
-    private static void printInfo(File f1 ,String emptyString){
-        if(f1.isDirectory()){
-            System.out.println(emptyString +f1.getName());
-            for(File f : f1.listFiles()){
+
+    private static void printInfo(File f1, String emptyString) {
+        if (f1.isDirectory()) {
+            System.out.println(emptyString + f1.getName());
+            for (File f : f1.listFiles()) {
                 printInfo(f, emptyString + " ");
             }
-        }
-        else{
+        } else {
             System.out.println(emptyString + f1.getName());
         }
     }
