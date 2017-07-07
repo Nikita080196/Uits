@@ -35,7 +35,8 @@ public class User {
     public static void main(String[] args) {
 
         User user = new User();
-        user.createQuery();
         Query query = user.new Query();
+        user.createQuery();
+        query.printToLog();
     }
 }
