@@ -1,4 +1,4 @@
-package lesson11;
+package lesson11.task1;
 
 enum Season {
     WINTER(-3), SPRING(20), SUMMER(30) {
