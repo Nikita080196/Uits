@@ -1,4 +1,4 @@
-package lesson12.task1;
+package lesson12.task4;
 
 public class Rename {
     public static void main(String[] args) {
