@@ -10,7 +10,7 @@ public class Polindrom {
             StringBuilder sb = new StringBuilder(number);
             sb.reverse();
             if (number.equals(sb.toString())) {
-                System.out.println("Минимальньое значение различных символов : " + number);
+                System.out.println("Цифра-полиндром : " + number);
             }
         }
     }
