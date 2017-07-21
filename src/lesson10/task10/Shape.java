@@ -1,17 +1,22 @@
 package lesson10.task10;
 
 abstract class Shape {
-    private int x;
-    private int y;
     private String color;
 
-    public float getX() {
-        return x;
+    public Shape() {
     }
 
-    public float getY() {
-        return y;
+    public Shape(String color) {
+        this.color = color;
     }
 
-    abstract public float draw();
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    abstract public void draw();
 }
