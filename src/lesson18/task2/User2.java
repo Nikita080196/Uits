@@ -1,12 +1,17 @@
-package lesson18.task1;
+package lesson18.task2;
 
-public class User {
+public class User2 {
     private String login = "Никита";
     private String password = "sfscgs24";
 
     public void createQuery() {
+        class Query {
+            public void printToLog() {
+                System.out.println("Пользователь c логином " + getLogin() + " и паролем " + getPassword() + " существует");
+            }
+        }
         Query query = new Query();
-
+        query.printToLog();
     }
 
     public String getLogin() {
@@ -25,17 +30,9 @@ public class User {
         this.password = password;
     }
 
-    public class Query {
-        public void printToLog() {
-            System.out.println("Пользователь c логином " + getLogin() + " и паролем " + getPassword() + " существует");
-        }
-    }
-
     public static void main(String[] args) {
 
-        User user = new User();
-        Query query = user.new Query();
-        user.createQuery();
-        query.printToLog();
+        User2 user2 = new User2();
+        user2.createQuery();
     }
 }
