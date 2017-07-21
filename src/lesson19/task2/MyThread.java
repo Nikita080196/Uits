@@ -1,4 +1,4 @@
-package lesson20;
+package lesson19.task2;
 
 public class MyThread extends Thread {
     StringBuilder a;

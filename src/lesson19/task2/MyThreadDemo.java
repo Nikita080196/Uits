@@ -1,4 +1,6 @@
-package lesson20;
+package lesson19.task2;
+
+import lesson19.task2.MyThread;
 
 public class MyThreadDemo {
     public static void main(String[] args) {

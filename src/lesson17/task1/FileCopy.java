@@ -1,22 +1,19 @@
 package lesson17.task1;
 
-import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class FileCopy {
-    public static void main(String[] args) {
-        File f1 = new File("src");
-
-        printInfo(f1, " ");
-    }
-
-    private static void printInfo(File f1, String emptyString) {
-        if (f1.isDirectory()) {
-            System.out.println(emptyString + f1.getName());
-            for (File f : f1.listFiles()) {
-                printInfo(f, emptyString + " ");
+    public static void main(String args[]) {
+        try (FileInputStream fileInputStream = new FileInputStream("src\\lesson17\\task1\\file.txt");
+             FileOutputStream fileOutputStream = new FileOutputStream("src\\lesson17\\task1\\newFile.txt")) {
+            int a;
+            while ((a = fileInputStream.read()) != -1) {
+                fileOutputStream.write(a);
             }
-        } else {
-            System.out.println(emptyString + f1.getName());
+        } catch (IOException e) {
+            System.out.println("Ошибка копирования файла! ");
         }
     }
 }
