@@ -31,4 +31,32 @@ public class Circle extends Shape {
         System.out.println("Рисуется " + getColor() + " круг");
         System.out.println("С координатами : x = " + x + " , y =" + y);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Circle circle = (Circle) o;
+
+        if (x != circle.x) return false;
+        return y == circle.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        result = 31 * result + x;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "color=" + getColor() +
+                ", x = " + y +
+                ", y = " + x +
+                '}';
+    }
 }

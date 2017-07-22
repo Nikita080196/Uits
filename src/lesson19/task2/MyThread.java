@@ -9,8 +9,7 @@ public class MyThread extends Thread {
                 System.out.print(a);
             }
             char letter = a.charAt(0);
-                    a.setCharAt(0, ++letter);
-
+            a.setCharAt(0, ++letter);
         }
     }
 
@@ -19,4 +18,3 @@ public class MyThread extends Thread {
 
     }
 }
-

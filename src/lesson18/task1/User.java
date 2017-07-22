@@ -6,7 +6,6 @@ public class User {
 
     public void createQuery() {
         Query query = new Query();
-
     }
 
     public String getLogin() {
