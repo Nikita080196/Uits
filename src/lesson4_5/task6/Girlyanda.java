@@ -1,54 +1,48 @@
 package lesson4_5.task6;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Girlyanda {
+
+    public void miganie(int girlyanda, int count) {
+        for (int i = 0; i < count; i++) {
+            girlyanda = ~girlyanda;
+            print(girlyanda);
+        }
+    }
+
+    public void print(int girlyanda) {
+        System.out.println("Состояние гирлянды : " + Integer.toBinaryString(girlyanda));
+    }
+
+    public void turnONFirstPos(int girlyanda) {
+        int res = girlyanda & 1;
+        String str = Integer.toBinaryString(res);
+        if (str.substring(str.length() - 1).equals("0"))
+            System.out.println("Лампочка на первой позиции выключена.");
+        else
+            System.out.println("Лампочка на первой позиции включена.");
+
+    }
+
+    public void run(int girlyanda) {
+        for (int i = 0; i < 5; i++) {
+            girlyanda <<= i;
+            System.out.print(Integer.toBinaryString(girlyanda) + " ");
+        }
+    }
+
     public static void main(String[] args) {
-
         Random random = new Random();
+        Girlyanda girlyanda = new Girlyanda();
         int i = random.nextInt(32);
-        Scanner scanner = new Scanner(System.in);
-        int a = 0;
-        System.out.println("Введите что вы хотите сделать с гирляндой");
-        System.out.println("Введите 1 если гирлянда будет миигать");
-        System.out.println("Введите 2 если гирлядна будет мигать бегущей строкой");
-        System.out.println("Введите 3 если будет выясняться включена ли лампочка на первой позиции");
-        System.out.println("Введите 4 если хотите распечатать текущее состояние гирлянды");
-        int k = check(scanner);
-        if (k > 4 || k < 1) {
-            System.exit(0);
-        }
-    }
+        System.out.println(i);
 
-    public static int check(Scanner scanner) {
-        int count = 0;
-        if (scanner.hasNextInt()) {
-            count = scanner.nextInt();
-        }
-        if (count < 0) {
-            System.exit(0);
-        }
-        return count;
-    }
-
-    public static void light(int i, int count ) {
-        int c = 1;
-        while (c < count) {
-
-            System.out.println(i);
-            i = ~i;
-            c++;
-        }
-
-    }
-
-    public static void runString(int i, int count ) {
-       int e = 1;
-        while (e < count ) {
-            i = i >> 1;
-            System.out.println(i);
-            e++;
-        }
+        girlyanda.print(random.nextInt());
+        girlyanda.turnONFirstPos(i);
+        System.out.println("Мигание гирлянды : ");
+        girlyanda.miganie(i, 6);
+        System.out.println("Режим бегущей строки : ");
+        girlyanda.run(i);
     }
 }

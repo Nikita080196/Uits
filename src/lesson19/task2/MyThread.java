@@ -1,7 +1,7 @@
 package lesson19.task2;
 
 public class MyThread extends Thread {
-    StringBuilder a;
+    private StringBuilder a;
 
     public void run() {
         synchronized (a) {
@@ -15,6 +15,5 @@ public class MyThread extends Thread {
 
     MyThread(StringBuilder stringBuilder) {
         a = stringBuilder;
-
     }
 }
