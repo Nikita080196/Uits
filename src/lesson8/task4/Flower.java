@@ -36,4 +36,30 @@ abstract class Flower {
         }
         return sum;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flower flower = (Flower) o;
+
+        if (date != flower.date) return false;
+        return nameOfFlower != null ? nameOfFlower.equals(flower.nameOfFlower) : flower.nameOfFlower == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nameOfFlower != null ? nameOfFlower.hashCode() : 0;
+        result = 31 * result + date;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "nameOfFlower='" + nameOfFlower + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }
