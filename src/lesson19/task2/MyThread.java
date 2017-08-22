@@ -13,7 +13,7 @@ public class MyThread extends Thread {
         }
     }
 
-    MyThread(StringBuilder stringBuilder) {
+    public MyThread(StringBuilder stringBuilder) {
         a = stringBuilder;
     }
 }
