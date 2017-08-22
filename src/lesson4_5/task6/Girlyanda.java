@@ -17,12 +17,11 @@ public class Girlyanda {
 
     public void turnONFirstPos(int girlyanda) {
         int res = girlyanda & 1;
-        String str = Integer.toBinaryString(res);
-        if (str.substring(str.length() - 1).equals("0"))
+        if (res==0){
             System.out.println("Лампочка на первой позиции выключена.");
-        else
+        } else {
             System.out.println("Лампочка на первой позиции включена.");
-
+        }
     }
 
     public void run(int girlyanda) {
