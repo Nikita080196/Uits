@@ -2,7 +2,7 @@ package lesson16.task1;
 
 public class WrongDemoExeption {
     public static void main(String[] args) {
-        validate("Nikita12314", "12345678", "1234678");
+        validate("Nikita1231475", "12345678", "1234678");
         validate("barcik", "5252rfs", "5252rfs");
         validate("kolos", "4131145", "4131145");
     }
@@ -10,18 +10,21 @@ public class WrongDemoExeption {
     private static void validate(String login, String password, String confirm) {
         try {
             if (login.length() > 20) {
-                System.out.println("Логин");
-                throw new WrongLoginExeption("Ошибка в пароле");
+                throw new WrongLoginExeption("Ошибка логина");
             } else if (password.length() > 20) {
-                throw new WrongPassExeption("Ошибка в пароле");
+                throw new WrongPassExeption("Ошибка пароля");
             }
             if (password.equals(confirm)) {
                 System.out.println("Пароль подтвержден");
             } else {
-                System.out.println("Не верный логим или пароль");
+                throw new WrongPassExeption("Не верный пароль");
             }
-        } catch (WrongLoginExeption | WrongPassExeption e) {
-            System.out.println("Не верный логин или пароль");
+        } catch (WrongLoginExeption e){
+            System.out.println("Не верный логин");
+
+        }
+        catch (WrongPassExeption e){
+            System.out.println("Не верный пароль");
 
         } finally {
             System.out.println(login + " " + password + " " + confirm);
