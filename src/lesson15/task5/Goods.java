@@ -1,6 +1,6 @@
 package lesson15.task5;
 
-public class Goods {
+public class Goods implements  Comparable<Goods>{
     private String name;
     private int price;
     private int raiting;
@@ -62,6 +62,10 @@ public class Goods {
         result = 31 * result + price;
         result = 31 * result + raiting;
         return result;
+    }
+    @Override
+    public int compareTo(Goods goods) {
+        return this.raiting - goods.getRaiting();
     }
 }
 

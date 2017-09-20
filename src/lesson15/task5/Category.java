@@ -2,6 +2,7 @@ package lesson15.task5;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Category {
     private String name;
