@@ -1,24 +1,51 @@
-package lesson10.task6;
+package lesson19.task6;
 
+/**
+ * @author Nikita
+ * @version 1
+ *          on 20.09.2017.
+ */
 public abstract class Fruit {
     public String name;
     private static int count;
     public double cost;
 
+    /**
+     * @param name
+     * @param cost Use constructor for creating for counting
+     */
     public Fruit(String name, double cost) {
         this.name = name;
         this.cost = cost;
         count++;
     }
 
+    /**
+     * @return name
+     * method for getting name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name set name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return cost
+     * method for getting cost
+     */
+    public double getCost() {
+        return cost;
+    }
+
+    /**
+     * @param cost set cost of fruits
+     */
     public void setCost(double cost) {
         this.cost = cost;
     }
@@ -29,9 +56,6 @@ public abstract class Fruit {
 
     public abstract double cost();
 
-    public double getCost() {
-        return cost;
-    }
 
     public static int getCount() {
         return count;
@@ -42,7 +66,7 @@ public abstract class Fruit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Fruit fruit = (Fruit) o;
+        lesson10.task6.Fruit fruit = (lesson10.task6.Fruit) o;
 
         if (Double.compare(fruit.cost, cost) != 0) return false;
         return name.equals(fruit.name);
