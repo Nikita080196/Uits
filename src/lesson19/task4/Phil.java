@@ -1,6 +1,6 @@
 package lesson19.task4;
 
-public class Philosof implements Runnable {
+public class Phil implements Runnable {
     private String name;
     private Fork fork1;
     private Fork fork2;
@@ -13,7 +13,7 @@ public class Philosof implements Runnable {
         this.name = name;
     }
 
-    public Philosof(String name, Fork fork1, Fork fork2) {
+    public Phil(String name, Fork fork1, Fork fork2) {
         this.name = name;
         this.fork1 = fork1;
         this.fork2 = fork2;

@@ -10,14 +10,14 @@ public class Demo {
                 new Fork(),
 
         };
-        Philosof[] philosofers = new Philosof[]{
-                new Philosof("Вася", forks[0], forks[1]),
-                new Philosof("Петя", forks[1], forks[2]),
-                new Philosof("Никита", forks[3], forks[2]),
-                new Philosof("Дима", forks[3], forks[4]),
-                new Philosof("Витали1й", forks[4], forks[0]),
+        Phil[] philosofers = new Phil[]{
+                new Phil("Вася", forks[0], forks[1]),
+                new Phil("Петя", forks[1], forks[2]),
+                new Phil("Никита", forks[3], forks[2]),
+                new Phil("Дима", forks[3], forks[4]),
+                new Phil("Витали1й", forks[4], forks[0]),
         };
-        for (Philosof philosof : philosofers)
+        for (Phil philosof : philosofers)
             new Thread(philosof).start();
     }
 }
