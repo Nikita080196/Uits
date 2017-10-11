@@ -1,8 +1,12 @@
 package lesson12.task6;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Date;
+
 public class Employee {
     private String fullName;
     private double salary;
+    public static Date salaryDate;
 
     public Employee(String fullName, double salary) {
         this.fullName = fullName;
@@ -25,12 +29,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
         Employee[] employee = new Employee[3];
         employee[0] = new Employee("Никита", 13033.5252);
         employee[1] = new Employee("Вася", 50045.22425);
         employee[2] = new Employee("Петя", 10420.521);
-        EmployeeReport.generateReport(employee);
+        FullReport.generateFullReport(employee);
     }
 
     @Override
