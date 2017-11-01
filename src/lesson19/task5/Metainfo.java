@@ -2,7 +2,6 @@ package lesson19.task5;
 
 import lesson19.task2.MyThread;
 
-import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class Metainfo {
