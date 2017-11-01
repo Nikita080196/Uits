@@ -19,7 +19,6 @@ public class MinString {
 
     public static int getNumbChar(String word) {
         Set<Character> letters = new HashSet<>();
-        String string = word.toLowerCase();
         for (int i = 0; i < word.length(); i++) {
             letters.add(word.charAt(i));
         }
