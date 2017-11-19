@@ -4,33 +4,33 @@ import java.util.Arrays;
 
 public class Matrix {
     private double[][] matrix;
-    private int NumOfRows;
-    private int NumOfColums;
+    private int numOfRows;
+    private int numOfColums;
 
     public Matrix() {
         this(4, 4);
     }
 
-    public Matrix(int NumOfRows, int NumOfColums) {
-        matrix = new double[NumOfRows][NumOfColums];
-        this.setRowsNum(NumOfRows);
-        this.setColunsNum(NumOfColums);
+    public Matrix(int numOfRows, int numOfColums) {
+        matrix = new double[numOfRows][numOfColums];
+        this.setRowsNum(numOfRows);
+        this.setColunsNum(numOfColums);
     }
 
     public int getNumOfRows() {
-        return NumOfRows;
+        return numOfRows;
     }
 
-    private void setRowsNum(int NumOfRows) {
-        this.NumOfRows = NumOfRows;
+    private void setRowsNum(int numOfRows) {
+        this.numOfRows = numOfRows;
     }
 
     public int getNumOfColums() {
-        return NumOfColums;
+        return numOfColums;
     }
 
-    private void setColunsNum(int NumOfColums) {
-        this.NumOfColums = NumOfColums;
+    private void setColunsNum(int numOfColums) {
+        this.numOfColums = numOfColums;
     }
 
     public void setElement(int row, int column, double value) {
@@ -87,16 +87,16 @@ public class Matrix {
 
         Matrix matrix1 = (Matrix) o;
 
-        if (NumOfRows != matrix1.NumOfRows) return false;
-        if (NumOfColums != matrix1.NumOfColums) return false;
+        if (numOfRows != matrix1.numOfRows) return false;
+        if (numOfColums != matrix1.numOfColums) return false;
         return Arrays.deepEquals(matrix, matrix1.matrix);
     }
 
     @Override
     public int hashCode() {
         int result = Arrays.deepHashCode(matrix);
-        result = 31 * result + NumOfRows;
-        result = 31 * result + NumOfColums;
+        result = 31 * result + numOfRows;
+        result = 31 * result + numOfColums;
         return result;
     }
 
@@ -104,9 +104,8 @@ public class Matrix {
     public String toString() {
         return "Matrix{" +
                 "matrix=" + Arrays.toString(matrix) +
-                ", NumOfRows=" + NumOfRows +
-                ", NumOfColums=" + NumOfColums +
+                ", NumOfRows=" + numOfRows +
+                ", NumOfColums=" + numOfColums +
                 '}';
     }
 }
-
