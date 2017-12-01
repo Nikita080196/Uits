@@ -10,7 +10,7 @@ public class Horse extends Animal implements Serializable {
     }
 
     public static void serialize(Horse horse) {
-        try (OutputStream os = new FileOutputStream("src/io/ser_output.txt");
+        try (OutputStream os = new FileOutputStream("src/lesson17/io/ser_output.txt");
              ObjectOutput out = new ObjectOutputStream(os)) {
             out.writeObject(horse);
         } catch (IOException e) {
@@ -20,7 +20,7 @@ public class Horse extends Animal implements Serializable {
 
     public static Horse deSerialize() {
         Horse horse = null;
-        try (InputStream is = new FileInputStream("src/io/ser_output.txt");
+        try (InputStream is = new FileInputStream("src/lesson17/io/ser_output.txt");
              ObjectInput oi = new ObjectInputStream(is)) {
             horse = (Horse) oi.readObject();
         } catch (Exception e) {

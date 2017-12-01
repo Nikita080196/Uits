@@ -1,26 +1,26 @@
 package lesson8.task4;
 
 abstract class Flower {
-    private String nameOfFlower;
+    private String country;
     private int date;
     public static int count;
 
-    public Flower(String nameOfFlower, int date) {
-        this.nameOfFlower = nameOfFlower;
+    public Flower(String country, int date) {
+        this.country = country;
         this.date = date;
         count++;
     }
 
-    public String getName() {
-        return nameOfFlower;
+    public String getCountry() {
+        return country;
     }
 
     public int getDate() {
         return date;
     }
 
-    public void setName(String name) {
-        this.nameOfFlower = name;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public void setDate(int date) {
@@ -45,12 +45,12 @@ abstract class Flower {
         Flower flower = (Flower) o;
 
         if (date != flower.date) return false;
-        return nameOfFlower != null ? nameOfFlower.equals(flower.nameOfFlower) : flower.nameOfFlower == null;
+        return country != null ? country.equals(flower.country) : flower.country == null;
     }
 
     @Override
     public int hashCode() {
-        int result = nameOfFlower != null ? nameOfFlower.hashCode() : 0;
+        int result = country != null ? country.hashCode() : 0;
         result = 31 * result + date;
         return result;
     }
@@ -58,7 +58,7 @@ abstract class Flower {
     @Override
     public String toString() {
         return "Flower{" +
-                "nameOfFlower='" + nameOfFlower + '\'' +
+                "Country='" + country + '\'' +
                 ", date=" + date +
                 '}';
     }

@@ -3,8 +3,8 @@ package lesson8.task4;
 public class Tulip extends Flower {
     public static final int COST_OF__TULIP = 40;
 
-    public Tulip(String name, int date) {
-        super(name, date);
+    public Tulip(String country, int date) {
+        super(country, date);
     }
 
     @Override
